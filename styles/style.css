@@ -2,6 +2,12 @@
     text-decoration: none;
     list-style: none;
 }
+#cursair{
+      position:absolute;
+    width: 100px;
+    height: 100px;
+ 
+    }
 
 *:focus{
     outline: none;

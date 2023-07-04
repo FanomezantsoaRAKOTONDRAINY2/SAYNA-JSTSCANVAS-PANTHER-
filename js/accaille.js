@@ -15,7 +15,7 @@ flecheDroite.addEventListener('click', () => {
 flecheGauche.addEventListener('click', () => {
     page++ ;
     afficherMasquer();
-    container = scr
+    container.style.transform = "translate("+ page*975 +"px)";
     // container.style.transform = "translate("+ page*975 +"px)";
 });
 
@@ -36,3 +36,14 @@ function afficherMasquer() {
         flecheDroite.style.visibility = "visible";
     }
 };
+
+var suit = document.querySelectorAll ('#cursair');
+
+window.addEventListener("mousemove", function (event){
+    var mousex = event.clientX;
+    var mouseY = event.clientY;
+
+    suit.style.left = mousex + "px";
+    suit.style.top = mouseY  + "px";
+});
+alert('bonjours')

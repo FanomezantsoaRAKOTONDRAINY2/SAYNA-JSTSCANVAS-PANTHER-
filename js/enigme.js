@@ -62,6 +62,7 @@ function questionSuivant() {
         else if (r.toLowerCase() === listQuestions[count].reponse.toLowerCase()) {
             count ++;
             update();
+            alert("c\'est vrais  ")
         }
         else {
             alert("Réponse incorrecte! Allez un petit effort ;) ");
