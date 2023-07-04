@@ -1,0 +1,196 @@
+*{
+    
+    text-decoration: none;
+    list-style: none;
+}
+
+*:focus{
+    outline: none;
+}
+
+@font-face{
+    font-family: "PantheraRegular";
+    src: url(../fonts/PantheraRegular-MVZ9J.ttf);
+}
+h1{
+    font-family:"PantheraRegular";
+    font-size: 68px;
+    color: #9E91B7;
+}
+@font-face{
+    font-family: "FontsFree";
+    src: url(../fonts/FontsFree-Net-BEYNO.ttf);
+}
+h2, .menu2 a{
+    font-family:"FontsFree";
+    font-size: 32px;
+    color: #9E91B7;
+}
+.menu2 a {
+    font-family:"FontsFree";
+    font-size: 32px;
+    color: #9E91B7;
+
+}
+@font-face{
+    font-family: "h3";
+    src: url(/fonts/FontsFree-Net-BEYNO.ttf);
+}
+h3{
+    font-family:"FontsFree";
+    font-size:  24px;
+    color: #9E91B7;
+}
+@font-face{
+    font-family: "Cantarell-Regular" ;
+    src: url(../fonts/Cantarell-Regular.ttf);
+}
+p  {
+    font-family: "Cantarell-Regular";
+    font-size: 18px;
+    color: #FFFF;
+}
+
+/* barre de navigation */
+
+.barre{
+   display: flex;
+   justify-content: space-between;
+   padding: 5% 9% 5% 9%; 
+}
+.menu2 {
+    display: flex;
+    margin-right: 3%;
+    /* padding-right: 5%; */
+}
+.menu2 a{
+    padding: 0% 5%;
+    color: #FFFF;
+}
+.menu2 a:hover{
+    text-decoration: underline;
+    color: #9E91B7;
+    
+}
+/* main */
+a:hover{
+    text-decoration: underline;
+}
+/* premiere section */
+body{
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-image: url("../images/Illustrations + Logo/All pages/arrière_plan.png");
+    overflow-x: hidden;
+}  
+.texte1{
+    text-align: justify;
+    width: 500px;
+}
+.wakanda{
+    padding-top: 5%;
+    padding-left: 8%;
+    background-image: url("../images/Illustrations + Logo/Wakanda/Pantherwakanda1.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    opacity: 80%;
+}
+
+/* 2eme section */
+.recit{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: justify;
+    padding: 5% 4% 14% 6%;
+    width: 1250px;
+    background-image: url("../images/Illustrations + Logo/Wakanda/Pantherwakanda2.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 90%;
+    margin-top: none;
+}
+.image21 img{
+    width: 550px;
+}
+.colonne1{
+    width: 85%;
+}
+.colonne2{
+    width: 85%;
+}
+
+
+
+
+/* foooter */
+.pieds{
+    background-image: url("../images/Illustrations + logo/All pages/back_footer.png");
+    margin: -3%;
+     padding-top: 10px;
+     min-height: 600px;
+     /* position: relative; */
+}  
+.propos{
+    display: flex;
+    width: 60%;
+    margin-left: 40%;
+    margin-top: 10%;
+}
+.rs{
+    padding-left: 15%;
+    letter-spacing: 28px;
+}
+.rs h4{
+    letter-spacing: 28px;
+}
+.reseau{ 
+    display: flex;
+}
+.rs1{
+    padding-right: 20%;
+}
+
+.final{
+    position: relative;
+    width: 20%;
+    margin-left: 15%; 
+
+}
+.logo3{
+   width: 200px;
+   height: 40px
+}
+.footer{
+    position: absolute;
+    height: 40%;
+    top: -405%;
+    left: -25%;
+}
+.final:hover:hover{
+    transform: scale(1.1);
+}
+.politique{
+    font-size: 10px;
+    display: flex;
+    justify-content: center;   
+}
+.pltq{
+    margin: 0 5px;
+    color: #F2CEF2;
+}
+.pltq li a::before{
+    content: ".";
+}
+.pieds h4{
+    color: #FFFF;
+}
+.rs1:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
