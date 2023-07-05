@@ -1,6 +1,7 @@
 const container = document.querySelector('.les-actuer');
 const flecheDroite = document.querySelector('#droite');
 const flecheGauche = document.querySelector('#gauche');
+const suit = document.querySelector('.cursair');
 
 
 // initialisation
@@ -36,14 +37,11 @@ function afficherMasquer() {
         flecheDroite.style.visibility = "visible";
     }
 };
+    // l'image qui suit le cursair
 
-var suit = document.querySelectorAll ('#cursair');
+    window.addEventListener("mousemove", function (e){
+        suit.style.left = e.clientX+"px";
+        suit.style.top = e.clientY+"px";
 
-window.addEventListener("mousemove", function (event){
-    var mousex = event.clientX;
-    var mouseY = event.clientY;
+    });
 
-    suit.style.left = mousex + "px";
-    suit.style.top = mouseY  + "px";
-});
-alert('bonjours')
