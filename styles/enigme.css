@@ -71,6 +71,46 @@ span{
     font-family: "Cantarell" ;
     color: rgb(75, 13, 245);
 }
+/* cursor */
+.cursair {
+    position:fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%,-50%);
+    transition: .1s;
+    pointer-events: none;
+    z-index: 999;
+    mix-blend-mode: difference;
+
+}
+/* barre  */
+.coté{
+    position: fixed;
+    top: 0;  
+}
+.ligne1{
+    background-color: #FFFF;
+    height: 450px;
+    width: 3px;
+    position: fixed;
+}
+.ligne2{
+    position: fixed;
+}
+.ligne2-1{
+    background-color: #FFFF;
+    height: 350px;
+    width: 3px;
+    margin-left: 90%;
+    
+}
+.logo img{
+    margin-left: 50%;
+}
+.logo img:hover{
+    filter: brightness(0) invert(1);
+}
+
 /* barre de navigation */
 
 .menu{
@@ -204,67 +244,45 @@ button {
 }
 
 /* foooter */
-.pieds{
+footer{
     background-image: url("../images/Illustrations + Logo/All pages/back_footer.png");
-    margin: -3%;
-     padding-top: 10px;
-     min-height: 600px;
-     position: relative;
+    width: 120vw;
+    height: 100vh;
+}
+ .pieds{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3%;
 }  
-.propos{
-    display: flex;
-    width: 60%;
-    margin-left: 40%;
-    margin-top: 10%;
-}
-.rs{
-    padding-left: 15%;
-    letter-spacing: 28px;
-}
-.rs h4{
-    letter-spacing: 28px;
-}
-.reseau{ 
-    display: flex;
-}
-.rs1{
-    padding-right: 20%;
-}
 
-.final{
+.image-footer{
     position: relative;
-    width: 20%;
-    margin-left: 15%; 
-
 }
-.logo3{
-   width: 200px;
-   height: 40px
+.footer1 :hover{
+    transform: scale(1.2);
 }
-.footer{
+.image-footer, .propo, .page{
+    margin-top: 5%;
+}
+.footer2{
     position: absolute;
-    height: 40%;
-    top: -405%;
-    left: -25%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
 }
- .final:hover:hover{
-     transform: scale(1.1);
- }
- .politique{
-     font-size: 10px;
-     display: flex;
-     justify-content: center;   
- }
- .pltq{
-     margin: 0 5px; 
-     color: #F2CEF2;
- }
- .pltq li a::before{
-     content: ".";
- }
- .pieds h4{
-     color: #FFFF;
- }
- .rs1:hover{
-    transform: scale(1.1);
+.pltq li a::before{
+    content: ".";
 }
+.pieds h4{
+    color: #FFFF;
+}
+.reseau {
+    letter-spacing: 22px;
+}
+.reseau a :hover{
+    transform: scale(1.2);
+}  
+

@@ -3,12 +3,18 @@
     list-style: none;
 }
 .cursair {
-    position:absolute;
-    width: 100px;
-    height: 100px;
- 
-    }
-
+    position:fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%,-50%);
+    transition: .2s;
+    pointer-events: none;
+    z-index: 999;
+    mix-blend-mode: difference;
+}
+header footer main{
+    z-index: 1;
+}
 *:focus{
     outline: none;
 }
@@ -91,6 +97,7 @@ p,  .page a{
 /* barre de navigation */
 .coté{
     position: absolute;  
+    top: 0;
 }
 .ligne1{
     background-color: #FFFF;
@@ -214,8 +221,10 @@ p,  .page a{
     opacity: 0.5;
     transition: all 0.3s ease;
 }
+
 #droite:hover {
     opacity: 1;
+    
 }
 #gauche {
     width: 200px;
@@ -277,8 +286,12 @@ ul li{
 }
 .absolue1 img{
     height: 400px;
+    transition: all 1s ease;
 }
-
+.absolue1 img:hover{
+    transform: scale(1.2);
+    transition: all 1s ease;
+}
 .colonne2{
     margin-top: 30%;
 
@@ -291,6 +304,12 @@ ul li{
 }
 .ptr6 img{
     padding-top: 100%;
+    transition: all 1s ease;
+}
+.ptr6 img:hover{
+    transform: scale(1.2);
+    transition: all 1s ease;
+
 }
 /* folmulaire */
 .formulaire{
@@ -347,54 +366,36 @@ ul li{
     padding: 12% 0;
 }
 /* foooter */
-.pieds{
+footer{
     background-image: url("../images/Illustrations + Logo/All pages/back_footer.png");
-    margin: -3%;
-     padding-top: 10px;
-     min-height: 600px;
+    width: 120vw;
+    height: 100vh;
+}
+ .pieds{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3%;
 }  
-.propo{
-    display: flex;
-    width: 40%;
-    margin-left: 40%;
-    margin-top: 10%;
-}
-.rs{
-    padding-left: 15%;
-    letter-spacing: 28px;
-}
-.rs h4{
-    letter-spacing: 28px;
-}
-.reseau{ 
-    display: flex;
-}
-.rs1{
-    padding-right: 20%;
-}
-.final{
+
+.image-footer{
     position: relative;
-    width: 50%;
-    margin-left: 15%; 
-
+    transition: all 1s ease;
 }
-.footer{
+.image-footer:hover{
+    transform: scale(1.2);
+    transition: all 1s ease;
+}
+.image-footer, .propo, .page{
+    margin-top: 5%;
+}
+.footer2{
     position: absolute;
-    height: 4%;
-    top: -405%;
-    left: -15%;
-}
-
-.final:hover{
-    transform: scale(1.1);
-}
-.politique{
-    font-size: 10px;
-    display: flex;
-    justify-content: center;   
-}
-.pltq{
-    color: #F2CEF2;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
 }
 .pltq li a::before{
     content: ".";
@@ -402,298 +403,14 @@ ul li{
 .pieds h4{
     color: #FFFF;
 }
-.rs1:hover{
-    transform: scale(1.1);
+.reseau {
+    letter-spacing: 22px;
 }
-/* resposive */
-/* @media all and (max-width: 1200px){ 
-    .menu2 a{
-        font-size: 12px;
-        margin-left: 12px;
-    } 
-    /* page2 */
-   /* .black h1{
-        font-size: 45px;
-    }
-    .black h2{
-        font-size: 25px;
-    }
-    .black p{
-        font-size: 12px;
-    }
-    .hero{
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        height: 150%;
-        margin-top: -2%
-    }
-    .hero1{
-        display: flex;
-
-    }
-    .hero h2{
-        font-size: 25px;
-    }
-    .hero p{
-        font-size: 12px;
-    }
-    .okoto img{
-        width: 97%;
-        margin-left:85%;
-    }
-    .pather img{
-        width: 70%;
-        margin-top: 6%;
-        margin-left: 56%;
-    } 
-    .text-okoto{
-        width: 50%;
-        margin-left: 15%;
-    }
-    .pather-text{
-        width: 50%;
-        height: 50%;
-    }
-    /* .pre{
-        margin: 3% 0 0 30% ;
-    } */
-    /* .pre img{
-        width: 100%;
-        height: 90%;
-    }
-    .texte0 ul {
-        font-size: 15px;
-    } */
-    /* page3 */
-    /* .page3 h2{
-        font-size: 25px;
-    }
-    .page3 p{
-        font-size: 12px;
-    }
-    .page3{
-        display: flex;
-        flex-direction: column;
-    }
-    .apropo{
-       height: 3vh;
-       font-size: 25px;
-    }
-    .bloc{
-        margin-top: -63%;
-    }
-    .ptr6 {
-        margin-top: -45%;
-    }
-    .ptr6 img{
-        margin-top: -45%;
-        width: 180%;
-    }
-    .contact{
-        width: 120%;
-    }
-    .formulaire h4{
-        font-size: 25px;
-    }
-    .formulaire p{
-        font-size: 12px;
-    }
-    .frm-1 input{
-        border: 20px;
-        border-radius: 40px 40px;
-        border: 1px solid #021740;
-        width: 220px;
-        height: 56px;
-        margin-bottom: 3%;
-    }
-    .frm-2 input{
-        border: 20px;
-        border-radius: 40px 40px;
-        border: 1px solid #021740;
-        width: 220px;
-        height: 150px;
-        padding-left: 5%;
-        background: none;
-    }
-    .frm-4 button{
-        width: 104px;
-        height: 34px;
-        text-align: center;
-        background: #FFFF;
-        border-radius: 40px 40px;
-        background-color:  #07338C;
-    } */
-    /* footer */
-    /* .pieds{
-        height: 700px;
-        width: 120%;
-    }
-    .propo{
-        display: inline-block;
-        width: 60%;
-        margin-left: 10%;
-        margin-top: 25%;
-        text-align: center;
-    }
-    .final{
-        margin-top: -31%;
-        width: 50%;
-        margin-left: 25%;
-    }
-    .reseau a {
-        letter-spacing: 5px;
-    }
-    .footer img{
-        width: 90%;
-        margin-left: 45%;
-    }
-    .politique{
-        margin-top: 30%;
-    }
-    .pltq a{
-        font-size: 10px;
-    }
-    .logo3{
-        margin-left: 20%;
-    }
-    
+.reseau a {
+    transition: all 1s ease;
 }
-@media all and (max-width:1100px){
-    .menu2{
-        padding-left: 25%;
-    }
-    body{
-        font-size: 10px;
-    }
-    
-} 
-@media all and (max-width: 960px){
-    .okoto img{
-        width: 67%;
-        margin-left:75%;
-    }
-    .absolue1 img{
-        margin-top: -3%;
-        width: 60%;
-        height: 60%;
-        margin-left: 15%;
-
-    }
-}
-@media all and (max-width: 882px){
-    .absolue1 img{
-        margin-top: -16%;
-        width: 60%;
-        height: 60%;
-        margin-left: 15%;
-    }
-    .propo{
-        display: inline-block;
-        width: 60%;
-        margin-left: 10%;
-        margin-top: 25%;
-        text-align: center;
-    }
-    .final{
-        margin-top: -45%;
-        width: 50%;
-        margin-left: 20%;
-    }
-    .page{
-        margin-top: 23%;
-    }
-    .footer img{
-        width: 90%;
-        margin-left: 40%;
-    }
-    .politique{
-        margin-top: 44%;
-    }
-    .rs{
-        margin-top: 4%;
-    }
-
-}
-@media all and (max-width: 710px){
-    .apropo{
-        height: 3vh;
-        font-size: 25px;
-     }
-    .absolue1 img{
-        margin-top: -16%;
-        width: 50%;
-        height: 50%;
-        margin-left: 15%;
-    }
-}
-@media all and (max-width: 610px){
-    .apropo{
-        height: 6vh;
-        font-size: 25px;
-     }
-    .absolue1 img{
-        margin-top: -16%;
-        width: 50%;
-        height: 50%;
-        margin-left: 15%;
-    }
-    .propo{
-        display: inline-block;
-        width: 60%;
-        margin-left: 10%;
-        margin-top: 35%;
-        text-align: center;
-    }
-    .final{
-        margin-top: -45%;
-        width: 50%;
-        margin-left: 20%;
-    }
-    .page{
-        margin-top: 33%;
-    }
-    .footer img{
-        width: 90%;
-        margin-left: 40%;
-    }
-    .politique{
-        margin-top: 54%;
-    }
-    .rs{
-        margin-top: 15%;
-    }
-}
-
-@media all and (max-width: 600px){
-    .pather img{
-        width: 60%;
-        height: 96%;
-    }
-    .pather {
-        margin-left: -29%;
-    }
-    .okoto img, .text-okoto{
-        margin-left: -1%; 
-    }
-    .text-okoto{
-        margin-left: -32%;
-    }
-}
-@media all and (max-width: 400px){
-    .apropo ul{
-        font-size: 12px;
-     }
-     .apropo{
-        width: 100%;
-        height: 54%;
-        margin-top: 23%;
-     }
-    .absolue1 img{
-        margin-top: -16%;
-        width: 50%;
-        height: 50%;
-        margin-left: 15%;
-    }
-} */
+.reseau a :hover{
+    transform: scale(1.2);
+    transition: all 1s ease;
+}  
 

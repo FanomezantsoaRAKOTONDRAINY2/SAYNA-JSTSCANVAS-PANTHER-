@@ -1,0 +1,40 @@
+/* .hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-60%);
+    transition: all 1s ease-in-out;
+}
+.show{
+    opacity: 1;
+    transform: translate(0);
+    filter: (0);
+}
+.menu2 a{
+    color: aqua;
+
+} */
+
+nav, main, footer{
+    animation: gauche-droit 1s ease-in;
+
+}
+@keyframes gauche-droit  {
+    from{
+        transform: translateX(-60%);
+        
+    }
+    
+}
+.coté{
+    animation: vertcal 2s ease-in 1s, magie 2s ease-in;
+}
+@keyframes vertcal {
+    from{
+        top: -100%;
+    }
+}
+@keyframes magie {
+    from{
+        opacity: 0;
+    }
+}
