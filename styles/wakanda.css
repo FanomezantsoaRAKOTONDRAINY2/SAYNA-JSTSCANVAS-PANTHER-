@@ -7,14 +7,22 @@
 *:focus{
     outline: none;
 }
+body{
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-image: url("../images/Illustrations + Logo/All pages/arrière_plan.png");
+    overflow-x: hidden;
+    margin: 1% 1%;
+}  
 
 @font-face{
     font-family: "PantheraRegular";
     src: url(../fonts/PantheraRegular-MVZ9J.ttf);
 }
 h1{
-    font-family:"PantheraRegular";
-    font-size: 68px;
+    font-family:"FontsFree";
+    font-weight: normal;
+    font-size: 52px;
     color: #9E91B7;
 }
 @font-face{
@@ -50,6 +58,53 @@ p  {
     font-size: 18px;
     color: #FFFF;
 }
+@font-face {
+    font-family: "WakandaForever";
+    src: url(../fonts/WakandaForever-Regular.ttf);
+}
+h2{
+    font-family: "WakandaForever";
+    font-size: 43px;
+}
+/* cursor */
+.cursair {
+    position:fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%,-50%);
+    transition: .1s;
+    pointer-events: none;
+    z-index: 999;
+    mix-blend-mode: difference;
+}
+
+/* barre  */
+.coté{
+    position: fixed;
+    top:0;  
+}
+.ligne1{
+    background-color: #FFFF;
+    height: 450px;
+    width: 3px;
+    position: fixed;
+}
+.ligne2{
+    position: fixed;
+}
+.ligne2-1{
+    background-color: #FFFF;
+    height: 350px;
+    width: 3px;
+    margin-left: 90%;
+    
+}
+.logo img{
+    margin-left: 50%;
+}
+.logo img:hover{
+    filter: brightness(0) invert(1);
+}
 
 /* barre de navigation */
 
@@ -77,12 +132,6 @@ a:hover{
     text-decoration: underline;
 }
 /* premiere section */
-body{
-    background-repeat: no-repeat;
-    background-size: cover ;
-    background-image: url("../images/Illustrations + Logo/All pages/arrière_plan.png");
-    overflow-x: hidden;
-}  
 .texte1{
     text-align: justify;
     width: 500px;
@@ -124,72 +173,50 @@ body{
 
 
 /* foooter */
-.pieds{
-    background-image: url("../images/Illustrations + logo/All pages/back_footer.png");
-    margin: -3%;
-     padding-top: 10px;
-     min-height: 600px;
-     /* position: relative; */
+footer{
+    background-image: url("../images/Illustrations + Logo/All pages/back_footer.png");
+    width: 120vw;
+    height: 100vh;
+}
+ .pieds{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3%;
 }  
-.propos{
-    display: flex;
-    width: 60%;
-    margin-left: 40%;
-    margin-top: 10%;
-}
-.rs{
-    padding-left: 15%;
-    letter-spacing: 28px;
-}
-.rs h4{
-    letter-spacing: 28px;
-}
-.reseau{ 
-    display: flex;
-}
-.rs1{
-    padding-right: 20%;
-}
 
-.final{
+.image-footer{
     position: relative;
-    width: 20%;
-    margin-left: 15%; 
-
 }
-.logo3{
-   width: 200px;
-   height: 40px
+.footer1 :hover{
+    transform: scale(1.2);
 }
-.footer{
+.image-footer, .propo, .page{
+    margin-top: 5%;
+}
+.footer2{
     position: absolute;
-    height: 40%;
-    top: -405%;
-    left: -25%;
-}
-.final:hover:hover{
-    transform: scale(1.1);
-}
-.politique{
-    font-size: 10px;
-    display: flex;
-    justify-content: center;   
-}
-.pltq{
-    margin: 0 5px;
-    color: #F2CEF2;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
 }
 .pltq li a::before{
     content: ".";
 }
+.politique a{
+    color: #FFFF;
+}
 .pieds h4{
     color: #FFFF;
 }
-.rs1:hover{
-    transform: scale(1.1);
+.reseau {
+    letter-spacing: 22px;
 }
-
-
+.reseau a :hover{
+    transform: scale(1.2);
+}  
 
 
 

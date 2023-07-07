@@ -31,6 +31,7 @@ const nextBtn = document.querySelector('#envoyer');
 const popup = document.querySelector('#popup');
 const rebour = document.querySelector('#count');
 
+
 // initialisation
 let count = 0;
 // let count_down = 40;
@@ -82,96 +83,14 @@ function myTimer() {
     const result = new Date(deadline-d);
     rebour.innerHTML = result.toLocaleTimeString();
 }
+const suit = document.querySelector('.cursair');
 
-// Notre Canva
+    // l'image qui suit le cursair
 
-    var canvas = document.querySelector('#canvas');
-    var ctx = canvas.getContext('2d');
-    var raf;
-    var running = false;
+    window.addEventListener("mousemove", function (e){
+        suit.style.left = e.clientX+"px";
+        suit.style.top = e.clientY+"px";
 
-    // La taille du canva
-    const width = canvas.width = document.documentElement.scrollWidth;
-    const height = canvas.height = window.innerHeight;
-
-    // Pour que le canva prenne la dimension de tous le document
-    // const width = canvas.width = document.documentElement.scrollWidth;
-    // const height = canvas.height = document.documentElement.scrollHeight;
-
-    var icon = {
-    x: 500,
-    y: 500,
-    vx: 5,
-    vy: 5,
-    radius: 25,
-    draw: function() {
-        // Charger l'image
-        const image = new Image();
-        image.src = './images/Illustrations + Logo/Enigme/Pantherenigme2-1.png';
-      
-        // Attendre le chargement complet de l'image
-        image.onload = function() {
-          // Dessiner l'image à la place du cercle
-          ctx.drawImage(image, this.x - this.radius, this.y - this.radius, this.radius * 2, this.radius * 2);
-        }.bind(this);
-      }
-    };
-
-    function clear() {
-        ctx.clearRect(0,0,canvas.width,canvas.height);
-    }
-
-    function draw() {
-    clear();
-    icon.draw();
-    icon.x += icon.vx;
-    icon.y += icon.vy;
-
-    if (icon.y + icon.vy > canvas.height || icon.y + icon.vy < 0) {
-        icon.vy = -icon.vy;
-    }
-    if (icon.x + icon.vx > canvas.width || icon.x + icon.vx < 0) {
-        icon.vx = -icon.vx;
-    }
-
-    raf = window.requestAnimationFrame(draw);
-    }
-
-    // Mettre à jour les coordonnées du dessin lors du déplacement de la souris
-    function updateDrawingCoordinates(e) {
-        const rect = canvas.getBoundingClientRect();
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-      
-        const mouseX = e.clientX - rect.left + scrollLeft;
-        const mouseY = e.clientY + scrollTop;
-        return {
-          x: mouseX,
-          y: mouseY-75
-        };
-      }
-      
-      canvas.addEventListener('mousemove', function(e) {
-        const { x, y } = updateDrawingCoordinates(e);
-      
-        if (!running) {
-          clear();
-          icon.x = x;
-          icon.y = y;
-          icon.draw();
-        }
-      });
-
-    canvas.addEventListener("click",function(e){
-    if (!running) {
-        raf = window.requestAnimationFrame(draw);
-        running = true;
-    }
     });
 
-    canvas.addEventListener("mouseout",function(e){
-        window.cancelAnimationFrame(raf);
-        running = false;
-    });
 
-    icon.draw();
